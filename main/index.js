@@ -9,6 +9,13 @@ function update(){
     let billEach = billTottla / split
 
     document.getElementById('tipPercent').innerHTML =tipPercentege+ ' %'
-    document.getElementById('tipValue').innerHTML = ' $ ' + tipValue
-    
+    document.getElementById('tipValue').innerHTML = ' $ ' + formatMoney(tipValue)
+    document.getElementById('totalWithTip').innerHTML = ' $ ' + formatMoney(billTottla)
+    document.getElementById('splitValue').innerHTML = split
+    document.getElementById('billEach').innerHTML = ' $ ' + formatMoney(billEach)
+}
+
+function formatMoney(value) {
+    value = value.toFixed(2)
+    return " $ " + value
 }
